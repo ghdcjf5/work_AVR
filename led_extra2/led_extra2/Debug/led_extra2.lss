@@ -1,0 +1,339 @@
+
+led_extra2.elf:     file format elf32-avr
+
+Sections:
+Idx Name          Size      VMA       LMA       File off  Algn
+  0 .data         00000000  00800100  00800100  000001e4  2**0
+                  CONTENTS, ALLOC, LOAD, DATA
+  1 .text         00000190  00000000  00000000  00000054  2**1
+                  CONTENTS, ALLOC, LOAD, READONLY, CODE
+  2 .comment      00000030  00000000  00000000  000001e4  2**0
+                  CONTENTS, READONLY
+  3 .note.gnu.avr.deviceinfo 0000003c  00000000  00000000  00000214  2**2
+                  CONTENTS, READONLY
+  4 .debug_aranges 00000040  00000000  00000000  00000250  2**0
+                  CONTENTS, READONLY, DEBUGGING
+  5 .debug_info   00000a28  00000000  00000000  00000290  2**0
+                  CONTENTS, READONLY, DEBUGGING
+  6 .debug_abbrev 00000817  00000000  00000000  00000cb8  2**0
+                  CONTENTS, READONLY, DEBUGGING
+  7 .debug_line   000003ba  00000000  00000000  000014cf  2**0
+                  CONTENTS, READONLY, DEBUGGING
+  8 .debug_frame  00000064  00000000  00000000  0000188c  2**2
+                  CONTENTS, READONLY, DEBUGGING
+  9 .debug_str    00000429  00000000  00000000  000018f0  2**0
+                  CONTENTS, READONLY, DEBUGGING
+ 10 .debug_loc    0000024e  00000000  00000000  00001d19  2**0
+                  CONTENTS, READONLY, DEBUGGING
+ 11 .debug_ranges 00000030  00000000  00000000  00001f67  2**0
+                  CONTENTS, READONLY, DEBUGGING
+
+Disassembly of section .text:
+
+00000000 <__vectors>:
+   0:	45 c0       	rjmp	.+138    	; 0x8c <__ctors_end>
+   2:	00 00       	nop
+   4:	4b c0       	rjmp	.+150    	; 0x9c <__bad_interrupt>
+   6:	00 00       	nop
+   8:	49 c0       	rjmp	.+146    	; 0x9c <__bad_interrupt>
+   a:	00 00       	nop
+   c:	47 c0       	rjmp	.+142    	; 0x9c <__bad_interrupt>
+   e:	00 00       	nop
+  10:	45 c0       	rjmp	.+138    	; 0x9c <__bad_interrupt>
+  12:	00 00       	nop
+  14:	43 c0       	rjmp	.+134    	; 0x9c <__bad_interrupt>
+  16:	00 00       	nop
+  18:	41 c0       	rjmp	.+130    	; 0x9c <__bad_interrupt>
+  1a:	00 00       	nop
+  1c:	3f c0       	rjmp	.+126    	; 0x9c <__bad_interrupt>
+  1e:	00 00       	nop
+  20:	3d c0       	rjmp	.+122    	; 0x9c <__bad_interrupt>
+  22:	00 00       	nop
+  24:	3b c0       	rjmp	.+118    	; 0x9c <__bad_interrupt>
+  26:	00 00       	nop
+  28:	39 c0       	rjmp	.+114    	; 0x9c <__bad_interrupt>
+  2a:	00 00       	nop
+  2c:	37 c0       	rjmp	.+110    	; 0x9c <__bad_interrupt>
+  2e:	00 00       	nop
+  30:	35 c0       	rjmp	.+106    	; 0x9c <__bad_interrupt>
+  32:	00 00       	nop
+  34:	33 c0       	rjmp	.+102    	; 0x9c <__bad_interrupt>
+  36:	00 00       	nop
+  38:	31 c0       	rjmp	.+98     	; 0x9c <__bad_interrupt>
+  3a:	00 00       	nop
+  3c:	2f c0       	rjmp	.+94     	; 0x9c <__bad_interrupt>
+  3e:	00 00       	nop
+  40:	2d c0       	rjmp	.+90     	; 0x9c <__bad_interrupt>
+  42:	00 00       	nop
+  44:	2b c0       	rjmp	.+86     	; 0x9c <__bad_interrupt>
+  46:	00 00       	nop
+  48:	29 c0       	rjmp	.+82     	; 0x9c <__bad_interrupt>
+  4a:	00 00       	nop
+  4c:	27 c0       	rjmp	.+78     	; 0x9c <__bad_interrupt>
+  4e:	00 00       	nop
+  50:	25 c0       	rjmp	.+74     	; 0x9c <__bad_interrupt>
+  52:	00 00       	nop
+  54:	23 c0       	rjmp	.+70     	; 0x9c <__bad_interrupt>
+  56:	00 00       	nop
+  58:	21 c0       	rjmp	.+66     	; 0x9c <__bad_interrupt>
+  5a:	00 00       	nop
+  5c:	1f c0       	rjmp	.+62     	; 0x9c <__bad_interrupt>
+  5e:	00 00       	nop
+  60:	1d c0       	rjmp	.+58     	; 0x9c <__bad_interrupt>
+  62:	00 00       	nop
+  64:	1b c0       	rjmp	.+54     	; 0x9c <__bad_interrupt>
+  66:	00 00       	nop
+  68:	19 c0       	rjmp	.+50     	; 0x9c <__bad_interrupt>
+  6a:	00 00       	nop
+  6c:	17 c0       	rjmp	.+46     	; 0x9c <__bad_interrupt>
+  6e:	00 00       	nop
+  70:	15 c0       	rjmp	.+42     	; 0x9c <__bad_interrupt>
+  72:	00 00       	nop
+  74:	13 c0       	rjmp	.+38     	; 0x9c <__bad_interrupt>
+  76:	00 00       	nop
+  78:	11 c0       	rjmp	.+34     	; 0x9c <__bad_interrupt>
+  7a:	00 00       	nop
+  7c:	0f c0       	rjmp	.+30     	; 0x9c <__bad_interrupt>
+  7e:	00 00       	nop
+  80:	0d c0       	rjmp	.+26     	; 0x9c <__bad_interrupt>
+  82:	00 00       	nop
+  84:	0b c0       	rjmp	.+22     	; 0x9c <__bad_interrupt>
+  86:	00 00       	nop
+  88:	09 c0       	rjmp	.+18     	; 0x9c <__bad_interrupt>
+	...
+
+0000008c <__ctors_end>:
+  8c:	11 24       	eor	r1, r1
+  8e:	1f be       	out	0x3f, r1	; 63
+  90:	cf ef       	ldi	r28, 0xFF	; 255
+  92:	d0 e1       	ldi	r29, 0x10	; 16
+  94:	de bf       	out	0x3e, r29	; 62
+  96:	cd bf       	out	0x3d, r28	; 61
+  98:	71 d0       	rcall	.+226    	; 0x17c <main>
+  9a:	78 c0       	rjmp	.+240    	; 0x18c <_exit>
+
+0000009c <__bad_interrupt>:
+  9c:	b1 cf       	rjmp	.-158    	; 0x0 <__vectors>
+
+0000009e <led_move_upto>:
+	#else
+		//round up by default
+		__ticks_dc = (uint32_t)(ceil(fabs(__tmp)));
+	#endif
+
+	__builtin_avr_delay_cycles(__ticks_dc);
+  9e:	2f ef       	ldi	r18, 0xFF	; 255
+  a0:	33 ec       	ldi	r19, 0xC3	; 195
+  a2:	69 e0       	ldi	r22, 0x09	; 9
+  a4:	21 50       	subi	r18, 0x01	; 1
+  a6:	30 40       	sbci	r19, 0x00	; 0
+  a8:	60 40       	sbci	r22, 0x00	; 0
+  aa:	e1 f7       	brne	.-8      	; 0xa4 <led_move_upto+0x6>
+  ac:	00 c0       	rjmp	.+0      	; 0xae <led_move_upto+0x10>
+  ae:	00 00       	nop
+  b0:	80 e0       	ldi	r24, 0x00	; 0
+  b2:	90 e0       	ldi	r25, 0x00	; 0
+		_delay_ms(200);
+		
+		for(i=0;i<9;i++)
+		{
+		
+		PORTC = 0b00000001<<i;
+  b4:	41 e0       	ldi	r20, 0x01	; 1
+  b6:	50 e0       	ldi	r21, 0x00	; 0
+  b8:	9a 01       	movw	r18, r20
+  ba:	08 2e       	mov	r0, r24
+  bc:	02 c0       	rjmp	.+4      	; 0xc2 <led_move_upto+0x24>
+  be:	22 0f       	add	r18, r18
+  c0:	33 1f       	adc	r19, r19
+  c2:	0a 94       	dec	r0
+  c4:	e2 f7       	brpl	.-8      	; 0xbe <led_move_upto+0x20>
+  c6:	25 bb       	out	0x15, r18	; 21
+  c8:	2f ef       	ldi	r18, 0xFF	; 255
+  ca:	33 ec       	ldi	r19, 0xC3	; 195
+  cc:	69 e0       	ldi	r22, 0x09	; 9
+  ce:	21 50       	subi	r18, 0x01	; 1
+  d0:	30 40       	sbci	r19, 0x00	; 0
+  d2:	60 40       	sbci	r22, 0x00	; 0
+  d4:	e1 f7       	brne	.-8      	; 0xce <led_move_upto+0x30>
+  d6:	00 c0       	rjmp	.+0      	; 0xd8 <led_move_upto+0x3a>
+  d8:	00 00       	nop
+  da:	01 96       	adiw	r24, 0x01	; 1
+	{
+		char i;
+		
+		_delay_ms(200);
+		
+		for(i=0;i<9;i++)
+  dc:	89 30       	cpi	r24, 0x09	; 9
+  de:	91 05       	cpc	r25, r1
+  e0:	59 f7       	brne	.-42     	; 0xb8 <led_move_upto+0x1a>
+		{
+		
+		PORTC = 0b00000001<<i;
+		_delay_ms(200);
+		}
+	}
+  e2:	08 95       	ret
+
+000000e4 <led_on_upto>:
+void led_on_upto()
+	{
+  e4:	88 e0       	ldi	r24, 0x08	; 8
+  e6:	90 e0       	ldi	r25, 0x00	; 0
+		char i;
+		for(i=0;i<9;i++)
+		{
+			
+			
+			PORTC = (0b11111111>>(8-i));
+  e8:	4f ef       	ldi	r20, 0xFF	; 255
+  ea:	50 e0       	ldi	r21, 0x00	; 0
+  ec:	9a 01       	movw	r18, r20
+  ee:	08 2e       	mov	r0, r24
+  f0:	02 c0       	rjmp	.+4      	; 0xf6 <led_on_upto+0x12>
+  f2:	35 95       	asr	r19
+  f4:	27 95       	ror	r18
+  f6:	0a 94       	dec	r0
+  f8:	e2 f7       	brpl	.-8      	; 0xf2 <led_on_upto+0xe>
+  fa:	25 bb       	out	0x15, r18	; 21
+  fc:	2f ef       	ldi	r18, 0xFF	; 255
+  fe:	33 ec       	ldi	r19, 0xC3	; 195
+ 100:	69 e0       	ldi	r22, 0x09	; 9
+ 102:	21 50       	subi	r18, 0x01	; 1
+ 104:	30 40       	sbci	r19, 0x00	; 0
+ 106:	60 40       	sbci	r22, 0x00	; 0
+ 108:	e1 f7       	brne	.-8      	; 0x102 <led_on_upto+0x1e>
+ 10a:	00 c0       	rjmp	.+0      	; 0x10c <led_on_upto+0x28>
+ 10c:	00 00       	nop
+ 10e:	01 97       	sbiw	r24, 0x01	; 1
+ 110:	68 f7       	brcc	.-38     	; 0xec <led_on_upto+0x8>
+			_delay_ms(200);
+		}
+	}
+ 112:	08 95       	ret
+
+00000114 <led_off_downto>:
+		void led_off_downto()
+		{
+ 114:	80 e0       	ldi	r24, 0x00	; 0
+ 116:	90 e0       	ldi	r25, 0x00	; 0
+			char i;
+			for(i=0;i<9;i++)
+			{
+				
+				PORTC = 0b11111111>>i;
+ 118:	4f ef       	ldi	r20, 0xFF	; 255
+ 11a:	50 e0       	ldi	r21, 0x00	; 0
+ 11c:	9a 01       	movw	r18, r20
+ 11e:	08 2e       	mov	r0, r24
+ 120:	02 c0       	rjmp	.+4      	; 0x126 <led_off_downto+0x12>
+ 122:	35 95       	asr	r19
+ 124:	27 95       	ror	r18
+ 126:	0a 94       	dec	r0
+ 128:	e2 f7       	brpl	.-8      	; 0x122 <led_off_downto+0xe>
+ 12a:	25 bb       	out	0x15, r18	; 21
+ 12c:	2f ef       	ldi	r18, 0xFF	; 255
+ 12e:	33 ec       	ldi	r19, 0xC3	; 195
+ 130:	69 e0       	ldi	r22, 0x09	; 9
+ 132:	21 50       	subi	r18, 0x01	; 1
+ 134:	30 40       	sbci	r19, 0x00	; 0
+ 136:	60 40       	sbci	r22, 0x00	; 0
+ 138:	e1 f7       	brne	.-8      	; 0x132 <led_off_downto+0x1e>
+ 13a:	00 c0       	rjmp	.+0      	; 0x13c <led_off_downto+0x28>
+ 13c:	00 00       	nop
+ 13e:	01 96       	adiw	r24, 0x01	; 1
+		}
+	}
+		void led_off_downto()
+		{
+			char i;
+			for(i=0;i<9;i++)
+ 140:	89 30       	cpi	r24, 0x09	; 9
+ 142:	91 05       	cpc	r25, r1
+ 144:	59 f7       	brne	.-42     	; 0x11c <led_off_downto+0x8>
+			{
+				
+				PORTC = 0b11111111>>i;
+				_delay_ms(200);
+			}
+		}
+ 146:	08 95       	ret
+
+00000148 <led_move_downto>:
+			void led_move_downto()
+			{
+ 148:	80 e0       	ldi	r24, 0x00	; 0
+ 14a:	90 e0       	ldi	r25, 0x00	; 0
+				char i;
+				for(i=0;i<9;i++)
+				{
+					
+					PORTC = 0b10000000>>i;
+ 14c:	40 e8       	ldi	r20, 0x80	; 128
+ 14e:	50 e0       	ldi	r21, 0x00	; 0
+ 150:	9a 01       	movw	r18, r20
+ 152:	08 2e       	mov	r0, r24
+ 154:	02 c0       	rjmp	.+4      	; 0x15a <led_move_downto+0x12>
+ 156:	35 95       	asr	r19
+ 158:	27 95       	ror	r18
+ 15a:	0a 94       	dec	r0
+ 15c:	e2 f7       	brpl	.-8      	; 0x156 <led_move_downto+0xe>
+ 15e:	25 bb       	out	0x15, r18	; 21
+ 160:	2f ef       	ldi	r18, 0xFF	; 255
+ 162:	33 ec       	ldi	r19, 0xC3	; 195
+ 164:	69 e0       	ldi	r22, 0x09	; 9
+ 166:	21 50       	subi	r18, 0x01	; 1
+ 168:	30 40       	sbci	r19, 0x00	; 0
+ 16a:	60 40       	sbci	r22, 0x00	; 0
+ 16c:	e1 f7       	brne	.-8      	; 0x166 <led_move_downto+0x1e>
+ 16e:	00 c0       	rjmp	.+0      	; 0x170 <led_move_downto+0x28>
+ 170:	00 00       	nop
+ 172:	01 96       	adiw	r24, 0x01	; 1
+			}
+		}
+			void led_move_downto()
+			{
+				char i;
+				for(i=0;i<9;i++)
+ 174:	89 30       	cpi	r24, 0x09	; 9
+ 176:	91 05       	cpc	r25, r1
+ 178:	59 f7       	brne	.-42     	; 0x150 <led_move_downto+0x8>
+				{
+					
+					PORTC = 0b10000000>>i;
+					_delay_ms(200);
+				}
+			}
+ 17a:	08 95       	ret
+
+0000017c <main>:
+
+int main(void)
+{
+    /* Replace with your application code */
+	
+	DDRC = 0b11111111;    //data direct resiter(데이터 방향을 지시하는것)  현재는 내부의 스위치를 선택하여 출력을 하니까 8핀 모두 1로 출력으로 쓰는것(입력으로쓸떄는 버튼스위치)
+ 17c:	8f ef       	ldi	r24, 0xFF	; 255
+ 17e:	84 bb       	out	0x14, r24	; 20
+	PORTC = 0b00000000;  //초기화를 하기위해 8bit 0(0~7까지의 led꺼놓는것 즉, 두줄은 led를 쓰기위한 초기화 작업
+ 180:	15 ba       	out	0x15, r1	; 21
+
+	
+    while (1) 
+    {
+		led_move_upto();
+ 182:	8d df       	rcall	.-230    	; 0x9e <led_move_upto>
+		led_on_upto();
+ 184:	af df       	rcall	.-162    	; 0xe4 <led_on_upto>
+		led_off_downto();
+ 186:	c6 df       	rcall	.-116    	; 0x114 <led_off_downto>
+ 188:	df df       	rcall	.-66     	; 0x148 <led_move_downto>
+		led_move_downto();
+ 18a:	fb cf       	rjmp	.-10     	; 0x182 <main+0x6>
+
+0000018c <_exit>:
+ 18c:	f8 94       	cli
+
+0000018e <__stop_program>:
+ 18e:	ff cf       	rjmp	.-2      	; 0x18e <__stop_program>

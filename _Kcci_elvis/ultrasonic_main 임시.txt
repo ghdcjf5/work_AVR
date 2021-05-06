@@ -1,0 +1,42 @@
+/*
+ * sonicSensor_180403.c
+ *
+ * Created: 2018-04-03 오전 10:41:04
+ * Author : KCCI
+ */ 
+#define F_CPU 16000000L
+#include <avr/io.h>
+#include <avr/interrupt.h>
+#include <util/delay.h>
+
+volatile char distance_time; //거리 8bit니까 char로
+ISR(INT4_vect){ //rising
+	TCNT0 0;
+}
+
+ISR(INT5_vect){//faling
+	distance_time = TCNT0;
+}
+
+
+
+int main(void)
+{
+   EICRB = 0b00001011; //4번이 rising(하위비트) 5번 상위비트가 falling edge 를 쓸것이다.
+   EIMSK = 0b00110000; //external interrupt mask
+   DDRE = 0b00100000; //pe5번핀 사용
+   Timer0_Init(); //타이머가 초기화하고 tcnt0값이 올라간다.
+   FND_init();
+   FND_UPDATE(0); //fnd에 0000cnffur
+   sei();
+    while (1) 
+    {
+		PORTE |=0b00100000;
+		_delay_us(10);
+		PORTE&=0b11011111;  //triger 들어가는 코드
+		_delay_ms(1000);
+		FND_UPDATE(distance_time); //타이머의 값을 출력해준다.
+		
+    }
+}
+

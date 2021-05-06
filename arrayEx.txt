@@ -1,0 +1,2 @@
+char FND_FONT[10]
+

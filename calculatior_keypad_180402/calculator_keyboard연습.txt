@@ -1,0 +1,113 @@
+	else if(value>=11&&value<=16){
+				
+				_delay_ms(3000);
+				if(input_number){  
+				
+					if(opcode){ //opcode가 있으면
+						
+						switch(opcode){
+						case add: result = result+input_number;
+						opcode = add;break;
+						case sub: result = result-input_number;
+							opcode = sub;break;
+							case mul: result = result*input_number;
+							opcode = mul;break;
+							case div: result = result/input_number;
+							opcode = div;break;
+							
+						}
+					
+					 LCD_command(0x01);  //화면초기화
+					 _delay_ms(5);
+					 
+					 LCD_command(0xD0); //커서가 아랫줄 맨오른쪽에서 5번째 에 위치시킨다.
+					 LCD_5D(result);
+// 					 
+// 					 input_number = result;
+// 					 opcode =0;
+			
+					}
+						switch(value){
+							
+							case 11: result = input_number;input_number = 0;
+							
+							
+							opcode = add; break;
+							
+							case 13: result = input_number;input_number = 0;
+							
+							
+							opcode = mul; break;
+							
+							case 12: result = input_number;input_number = 0;
+							
+							
+							opcode = sub; break;
+							
+							case 14: result = input_number;input_number = 0;
+						
+							
+							opcode = div; break;
+							
+							
+							
+							case 16 : result=0;input_number=0;opcode=0;
+							LCD_command(0x01);  //화면초기화
+							_delay_ms(5);
+							LCD_string(0x80,"   calculator   ");
+							// LCD_command(0xcf);
+							break;
+							case 15 : 
+								switch(equal){
+									case add: result = result+input_number;
+									opcode = add;break;
+									case sub: result = result-input_number;
+									opcode = sub;break;
+									case mul: result = result*input_number;
+									opcode = mul;break;
+									case div: result = result/input_number;
+									opcode = div;break;
+									
+								}
+								
+
+							
+
+							LCD_command(0xcb); //커서가 아랫줄 맨오른쪽에서 5번째 에 위치시킨다.
+							LCD_5D(result);
+							
+							input_number = result;
+							opcode = 0; break;
+							
+							
+						}
+					
+					
+				}
+						
+					
+						
+					
+					
+		
+		
+		
+			else{ //inputnumber=0  //연속키때문에
+				switch(value){
+					case 11 : opcode = add; break;
+					case 12 : opcode = sub; break;
+					case 13 : opcode = mul; break;
+					case 14 : opcode = div; break;
+					case 16 : opcode = 0; input_number = 0; result = 0;
+					
+					break;
+					
+				}
+			}
+ 		}
+ 	}  
+	
+	
+	
+}
+
